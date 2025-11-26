@@ -1,10 +1,18 @@
 import CountryItem from "./CountryItem";
 
-function CountryList() {
+function CountryList({country}) {
   return (
 
     <ul className="country-list">
-        <CountryItem/>
+        {country.map ((eachCountry) => (
+            <CountryItem
+            key={eachCountry.id}
+            name={eachCountry.name}
+            capital={eachCountry.capital}
+            flag={eachCountry.flag}
+            />
+    ))}
+        
        
       
     </ul>

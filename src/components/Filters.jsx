@@ -5,7 +5,6 @@ function Filters() {
         Buscar país:
         <input
           type="text"
-          value=""
           className="filters__input"
           placeholder="Escribe un nombre..."
         />

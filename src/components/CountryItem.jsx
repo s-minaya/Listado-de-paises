@@ -1,9 +1,9 @@
-function CountryItem() {
+function CountryItem({name, capital, flag}) {
   return (
     <li className="country-list__item">
-      <span className="country-item__flag">bandera</span>
-      <span className="country-item__name">Nombre</span>
-      <span className="country-item__capital">Capital</span>
+      <span className="country-list__flag">{flag}</span>
+      <span className="country-list__name">{name}</span>
+      <span className="country-list__capital">{capital}</span>
     </li>
   );
 }

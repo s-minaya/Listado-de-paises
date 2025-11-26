@@ -2,7 +2,7 @@ import CountryItem from "./CountryItem";
 
 function CountryList({country, filterText}) {
     const filteredList = country.filter(eachCountry => eachCountry.name.toLowerCase().includes(filterText.toLowerCase()) || 
-    eachCountry.capital.toLowerCase().includes(filterText.toLowerCase()));
+    eachCountry.capital.toLowerCase().includes(filterText.toLowerCase()) || eachCountry.continent.toLowerCase().includes(filterText.toLowerCase()));
 
   return (
 
@@ -13,6 +13,7 @@ function CountryList({country, filterText}) {
             name={eachCountry.name}
             capital={eachCountry.capital}
             flag={eachCountry.flag}
+            continent = {eachCountry.continent}
             />
     ))}
     </ul>

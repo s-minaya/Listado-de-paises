@@ -1,12 +1,23 @@
 import "../styles/App.scss";
+import CountryList from "./CountryList";
+import Filters from "./Filters";
+import Header from "./Header";
+
 
 function App() {
   return (
     <div>
       <header className="header">
-        <h1 className="title">Plantilla React</h1>
+        <Header/>
       </header>
-      <main className="main">Holis Adalabers!!!</main>
+       <main className="main">
+      
+        <Filters/>
+        
+        <CountryList/>
+        
+        </main>
+     
     </div>
   );
 }

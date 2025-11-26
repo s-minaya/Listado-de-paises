@@ -8,6 +8,7 @@ import countries from "./countries";
 function App() {
 
   const [country, setCountry] = useState(countries);
+  const [filterText, setFilterText] = useState("");
 
   return (
     <div>
@@ -16,9 +17,9 @@ function App() {
       </header>
        <main className="main">
       
-        <Filters/>
+        <Filters filterText = {filterText} setFilterText = {setFilterText}/>
 
-        <CountryList country = {country}/>
+        <CountryList country = {country} filterText = {filterText}/>
         
         </main>
      

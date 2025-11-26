@@ -1,10 +1,12 @@
 import CountryItem from "./CountryItem";
 
-function CountryList({country}) {
+function CountryList({country, filterText}) {
+    const filteredList = country.filter(eachCountry => eachCountry.name.toLowerCase().includes(filterText.toLowerCase()));
+
   return (
 
     <ul className="country-list">
-        {country.map ((eachCountry) => (
+        {filteredList.map ((eachCountry) => (
             <CountryItem
             key={eachCountry.id}
             name={eachCountry.name}
@@ -12,9 +14,6 @@ function CountryList({country}) {
             flag={eachCountry.flag}
             />
     ))}
-        
-       
-      
     </ul>
   );
 }

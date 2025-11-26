@@ -9,6 +9,7 @@ function App() {
 
   const [country, setCountry] = useState(countries);
   const [filterText, setFilterText] = useState("");
+  const [filterContinent, setFilterContinent] = useState("")
 
   return (
     <div>
@@ -17,9 +18,9 @@ function App() {
       </header>
        <main className="main">
       
-        <Filters filterText = {filterText} setFilterText = {setFilterText}/>
+        <Filters filterText = {filterText} setFilterText = {setFilterText} filterContinent = {filterContinent} setFilterContinent={setFilterContinent}/>
 
-        <CountryList country = {country} filterText = {filterText}/>
+        <CountryList country = {country} filterText = {filterText} filterContinent={filterContinent}/>
         
         </main>
      

@@ -1,13 +1,15 @@
 import CountryItem from "./CountryItem";
 
-function CountryList({country, filterText}) {
+function CountryList({country, filterText, filterContinent}) {
     const filteredList = country.filter(eachCountry => eachCountry.name.toLowerCase().includes(filterText.toLowerCase()) || 
     eachCountry.capital.toLowerCase().includes(filterText.toLowerCase()) || eachCountry.continent.toLowerCase().includes(filterText.toLowerCase()));
+
+    const filteredContinent = country.filter(eachCountry => eachCountry.continent.toLowerCase().includes(filterContinent.toLowerCase()))
 
   return (
 
     <ul className="country-list">
-        {filteredList.map ((eachCountry) => (
+        {filteredList.map && filteredContinent.map ((eachCountry) => (
             <CountryItem
             key={eachCountry.id}
             name={eachCountry.name}
